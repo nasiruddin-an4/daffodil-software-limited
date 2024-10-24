@@ -818,6 +818,9 @@ ul.course-meta-stats li i {
 .course-meta-details li:last-child {
   border-right: 0 none;
 }
+.feature-blog{
+  display: none;
+}
 .blog-carousel .owl-nav,
 .course-carousel .owl-nav,
 .teacher-carousel .owl-nav {
@@ -921,6 +924,7 @@ img.title-top-shape {
 .teacher-area {
   position: relative;
   z-index: 1;
+  display: none;
 }
 .teacher-area .card-title.mb-4 {
   margin-bottom: 0 !important;
@@ -1025,6 +1029,7 @@ img.title-top-shape {
   background: #14171d;
   position: relative;
   z-index: 1;
+  display: none;
 }
 img.tst-bg {
   position: absolute;
