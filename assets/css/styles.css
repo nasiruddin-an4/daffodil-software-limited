@@ -43,6 +43,13 @@ a:focus,
 a:hover {
   color: #fc9928 !important;
 }
+p{
+  font-size: 14px !important;
+}
+h3{
+  font-size: 20px !important;
+  width: 80%;
+}
 *::-moz-selection {
   background: #fc9928;
   color: #fff;
@@ -62,10 +69,10 @@ a:hover {
   padding: 22px 40px !important;
 }        
 .btn {
-  background-image: linear-gradient(to right, #fc00ff 0%, #00dbde  51%, #fc00ff  100%);
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff  51%, #00dbde  100%);
   margin: 10px;
   font-size: 16px;
-  padding: 15px 30px;
+  padding: 10px 30px;
   text-align: center;
   transition: 0.5s;
   background-size: 200% auto;
@@ -110,9 +117,33 @@ a:hover {
   border-radius: 50px;
 }
 .primary-bg {
-  background-color: #fc9928;
+  background-color: #160937ff;
 }
-
+/*== Color Code ==*/
+.primary-color {
+  color: #160937ff !important;
+}
+.secondary-color{
+  color: #150B5Eff;
+}
+.text-white {
+  color: white !important;
+}
+.text-primary{
+  color: #300C79ff !important;
+}
+.section-title{
+  text-align: center;
+}
+.section-title h2{
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 20px;
+  color: #030c75;
+}
+.section-title p{
+  font-size: 14px;
+}
 /*============================================
     1. Header Top
 *=============================================*/
@@ -528,7 +559,7 @@ a:hover {
 *=============================================*/
 
 .glance{
-  background-color: #030c75;
+  background-image: linear-gradient(#160937, #080046);
   padding: 250px 0px;
   margin-top: -150px;
 }
@@ -552,7 +583,7 @@ a:hover {
 .single-fun{
   background-color: white;
   border-radius: 10px;
-  height: 250px;
+  height: 300px;
   padding: 20px;
   margin-bottom: 20px;
 }
@@ -566,7 +597,7 @@ a:hover {
 .counter-text h2{
 	font-size: 50px;
 	font-weight: 500;
-  padding-bottom: 120px;
+  padding-bottom: 160px;
 }
 .counter-text span{
 	font-size: 40px;
@@ -617,14 +648,6 @@ a:hover {
 .slider-content h1 span {
   display: block;
 }
-.primary-color {
-  color: #030c75 !important;
-}
-
-.text-color {
-  color: #fc9928;
-}
-
 .slider-content p {
   font-size: 16px;
   font-weight: 400;
@@ -724,6 +747,185 @@ a:hover {
 /*============================================
    END Product Area 
 *=============================================*/
+
+/*============================================
+   Services Area 
+*=============================================*/
+.our-service{
+  background-color: #010850;
+  padding: 50px 0px;
+}
+.service-card{
+  margin-bottom: 30px;
+  padding: 20px 30px;
+}
+.service-card i{
+  font-size: 50px;
+  color: #23066D;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+.service-card h3{
+  padding: 20px 0px;
+}
+
+/*=== Premium Software ==*/
+.premium-software {
+  position: relative;
+  background: linear-gradient(135deg, #010850, #010850);
+  color: #ffffff;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top: -70px;
+}
+.premium-software::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 40%;
+  background-color: rgba(170, 24, 255, 0.15); /* Adjust opacity to your preference */
+  border-radius: 90% 0 0 0%;
+}
+.service-fotter-left h2{
+  font-size: 40px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+/*============================================
+   END Services Area 
+*=============================================*/
+
+/*============================================
+    Technologies Area
+*=============================================*/
+
+/*==== Technology ====*/
+.Technology{
+  background-color: #f7f5f5;
+}
+.tech-item {
+  font-size: 14px;
+  background-color: #f7f5f5 !important;
+  border: none;
+}
+.tech-item a{
+  color: #000;
+  font-weight: 500;
+}
+.tech-item.active {
+  background-color: #c1bbff !important; /* Highlight color for active item */
+  border-radius: 4px;
+  color: white !important;
+  padding: 0px 5px;
+}
+.tech-item:hover {
+  color: #7267f0;
+}
+.nav-icon {
+  font-size: 18px;
+  margin-right: 5px;
+  color: #030c75;
+}
+/*=== Technology end ====*/
+/*=== Mobile App Development section ====*/
+.mobile-app-data h2{
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+.commn-carousel{
+  padding: 0px !important;
+}
+.app-card{
+  text-align: left;
+  padding: 20px 15px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 0px 5px;
+}
+.app-card img{
+  width: 60px;
+  height: 60px;
+  margin-left: -70px;
+}
+.app-card h2{
+  font-size: 32px;
+  font-weight: 700;
+  padding: 20px 0px;
+}
+/*============================================
+    Technologies End
+*=============================================*/
+
+/*============================================
+    Clients Slide start
+*=============================================*/
+.logos-slider {
+  overflow: hidden;
+  padding: 30px 0px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos-slider:before, .logos-slider:after {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos-slider:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
+}
+
+.logos-slider:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
+}
+.logos-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.logos-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slide 40s linear infinite;
+}
+
+.logos-slider-container img {
+  width:150px;
+ 	max-width: 150px;
+}
+.logos-slider-container a{
+	margin-left: 40px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0,0,0)
+  }
+  100% {
+    transform: translate3d(-100%,0,0)
+  }
+}
+
+/*============================================
+    Clients Slide END
+*=============================================*/
+
+
+
 
 /*============================================
     1.5 Course Area
@@ -912,59 +1114,9 @@ img.title-top-shape {
   background: #000;
   opacity: 0.7;
 }
-
-/*============================================
-    END Take Toure Area
-*=============================================*/
-
-/*============================================
-    1.7 Teacher Area
-*=============================================*/
-
-.teacher-area {
-  position: relative;
-  z-index: 1;
-  display: none;
-}
-.teacher-area .card-title.mb-4 {
-  margin-bottom: 0 !important;
-}
-.teacher-area:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  height: 400px;
-  width: 100%;
-  background: #14171d;
-}
-.teacher-content ul li a {
-  font-size: 16px;
-}
-
-.teacher-contenttchd-content ul li a {
-  margin-right: 10px;
-}
-
-/*============================================
-    END Teacher Area
-*=============================================*/
-
 /*============================================
     1.8 Event Area
 *=============================================*/
-
-/*.single-event{
-    align-items: center;
-    background: #ffffff none repeat scroll 0 0;
-    border: 1px solid #e6e9f2;
-    border-radius: 3px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}*/
 .media {
   border: 1px solid #efefef;
   transition: 0.5s;
@@ -1059,27 +1211,6 @@ img.tst-bg {
 
 /*============================================
     END Testimonial Area
-*=============================================*/
-
-/*============================================
-    1.10 Feature Blog
-*=============================================*/
-
-.card-body ul li {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0;
-  padding-right: 10px;
-}
-.card-body ul li i {
-  margin-right: 5px;
-}
-.blog-content h4 a {
-  display: block;
-  font-size: 22px;
-}
-/*============================================
-    END Feature Blog
 *=============================================*/
 
 /*============================================
@@ -1303,62 +1434,7 @@ img.tst-bg {
   color: #fc9928;
 }
 
-/*about-area-style2*/
 
-.about-area-style2 {
-  background: url(../images/bg/abt2-bg.jpg) center/cover no-repeat;
-}
-
-.section-title-style2 {
-  padding-top: 29px;
-  margin-bottom: 50px;
-}
-.section-title-style h2 {
-  font-size: 60px;
-  line-height: 70px;
-  margin-bottom: 30px;
-}
-
-.about-content-style2 .section-title-style2 {
-  margin-bottom: 0px;
-}
-
-.section-title-style2 span {
-  font-size: 20px;
-  font-weight: 400;
-  color: #fff;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  margin-bottom: 9px;
-  letter-spacing: 2px;
-  position: relative;
-  display: inline-block;
-}
-
-.section-title-style2 span:before,
-.section-title-style2 span:after {
-  content: "";
-  background: url(../images/icon/s2-title-left-shape.png) center/contain
-    no-repeat;
-  position: absolute;
-  left: -78px;
-  top: -40px;
-  height: 69px;
-  width: 67px;
-}
-
-.section-title-style2 span:after {
-  left: auto;
-  right: -78px;
-  background: url(../images/icon/s2-title-right-shape.png) center/contain
-    no-repeat;
-}
-.section-title-style2 h2 {
-  font-size: 54px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 66px;
-}
 
 .black-title span {
   color: #1e2c39;
@@ -1403,12 +1479,12 @@ img.tst-bg {
   height: 5px;
   border-radius: 30px;
   background: #b6b6b6;
-  margin: 0 5px;
+  margin: 50px 5px;
 }
 
 .tst-carousel .owl-dots .active,
 .commn-carousel .owl-dots .active {
-  background: #fc9928;
+  background: #5465ff;
 }
 
 /*============================================
@@ -2023,22 +2099,6 @@ h4.comment-title {
 
 /*============================================
     END Teacher Details
-*=============================================*/
-
-/*============================================
-    7. About
-*=============================================*/
-
-.ftch-two {
-  margin: 0;
-}
-
-.befr-themeoclor.teacher-area:before {
-  background: #fc9928;
-}
-
-/*============================================
-    END About
 *=============================================*/
 
 /*============================================

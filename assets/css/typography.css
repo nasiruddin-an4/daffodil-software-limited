@@ -66,7 +66,6 @@ blockquote p {
     font-style: italic;
     padding: 0;
     font-size: 18px;
-    line-height: 36px;
 }
 
 blockquote cite {
@@ -124,12 +123,6 @@ a:active {
 
 a:focus {
     text-decoration: none;
-    outline: 0;
-}
-
-p a,
-p a:visited {
-    line-height: inherit;
     outline: 0;
 }
 
@@ -195,8 +188,6 @@ li {
 }
 
 ul.large li {}
-
-li p {}
 
 
 /* definition list */

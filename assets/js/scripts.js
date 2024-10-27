@@ -81,10 +81,6 @@
                     items: 1,
                     margin: 5
                 },
-                480: {
-                    items: 1,
-                    margin: 30
-                },
                 768: {
                     items: 2,
                     margin: 30
@@ -102,19 +98,17 @@
     // commn_carousel carousel active
     function commn_carousel() {
         $('.commn-carousel').owlCarousel({
+            items: 3,
             loop: true,
-            autoplay: false,
+            autoplay: true,
             dots: true,
             margin: 0,
             autoplayTimeout: 4000,
             nav: false,
-            dotsEach: true,
+            dotsEach: false,
             smartSpeed: 800,
             responsive: {
                 0: {
-                    items: 1, 
-                },
-                480: {
                     items: 1, 
                 },
                 768: {
@@ -132,9 +126,10 @@
     // teacher_carousel carousel active
     function teacher_carousel() {
         $('.teacher-carousel').owlCarousel({
+            items: 3,
             loop: true,
-            autoplay: false,
-            dots: false,
+            autoplay: true,
+            dots: true,
             margin: 0,
             autoplayTimeout: 4000,
             nav: true,
@@ -142,9 +137,6 @@
             navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
             responsive: {
                 0: {
-                    items: 1 
-                },
-                480: {
                     items: 1 
                 },
                 768: {
@@ -173,9 +165,6 @@
             responsive: {
                 0: {
                     items: 1 
-                },
-                480: {
-                    items: 1
                 },
                 768: {
                     items: 2 
