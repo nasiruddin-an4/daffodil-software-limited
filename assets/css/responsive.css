@@ -741,33 +741,27 @@
 /* small mobile :320px. */
 
 @media (min-width: 240px) and (max-width: 479px) {
+    .header-top{
+        display: none;
+    }
+    .hd-btn{
+        display: none;
+    }
     .pb--80{
         padding-bottom: 40px;
     }
-    /*Home One*/
     .offset-search input {
         width: 255px;
     }
-    .ht-address {
-        text-align: center;
-    }
-    .ht-address ul li {
-        margin: 0;
-    }
-    .ht-social {
-        text-align: center;
-        margin-top: 10px;
-    }
-    .ht-social ul li a {
-        margin: 0 5px;
-    }
     .logo {
-        text-align: center;
         margin: 20px 0;
+    }
+    .logo a{
+        width: 20%;
     }
     .header-bottom,
     .sticky-header.header-bottom {
-        position: inherit;
+        position: absolute;
         top: auto;
         background: #222;
     }
@@ -898,7 +892,7 @@
         font-size: 12px;
     }
 
-    /*Home two*/
+    /*Home*/
     .header-two {
         background: #212121;
     }
@@ -961,47 +955,6 @@
     }
     .title-tb {
         margin-top: 12px;
-    }
-
-    /*home three*/
-    .header-three {
-        padding: 0 15px;
-    }
-    .hb-s3-right{
-        text-align: left;
-    }
-    .hb-s3-right li a {
-        padding: 12px 17px;
-    }
-    .cart_btn,
-    .search_btn {
-        margin-left: 18px;
-    }
-    .header-three .slicknav_btn {
-        margin-top: -48px;
-    }
-    .header-three .slicknav_menu .slicknav_icon-bar {
-        background-color: #333;
-    }
-    .hero-s3.hero-area {
-        margin-top: 161px;
-    }
-    .form-input-box .input {
-        display: block;
-        border: none;
-        margin-right: 0;
-        padding-right: 0;
-    }
-    .form-input-box .input input,
-    .form-input-box .input select {
-        padding-right: 0;
-        width: 100%;
-    }
-    .form-submit {
-        margin-top: 20px;
-    }
-    .form-submit button {
-        margin: 0;
     }
     .feature-archive {
         margin: 0 0 -40px;
