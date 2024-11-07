@@ -139,41 +139,69 @@
     .header-bottom-inner {
         border: none;
     }
-
-
+    .section-title h2{
+        font-size: 24px !important;
+        padding-bottom: 30px !important;
+        padding: 0px 20px;
+    }
+    .section-title p{
+        padding: 0px 10px !important;
+    }
     /*============================================
-    Hero Section
-*=============================================*/
-.hero{
-    background:linear-gradient(0deg, rgba(19, 0, 122, 0.658), rgba(29, 0, 95, 0.658)), url(../images/Hero-img.png);
-    background-size:cover;
-    background-repeat: no-repeat;
-  }
-  .hero-content{
-    padding-top: 200px;
-    text-align: left !important;
-    min-height: 825px;
-  }
-  .hero-content p{
-    color: white;
-    padding-bottom: 10px;
-  }
-  .hero-content h2{
-    color: white;
-    font-size: 32px;
-    font-weight: 700;
-    padding-bottom: 10px;
-  }
-  .hero-content .btn a{
-    color: white;
-  }
-  /*============================================
+        Hero Section
+    *=============================================*/
+    .hero{
+        background:linear-gradient(0deg, rgba(93, 65, 255, 0.658), rgba(18, 0, 61, 0.658)), url(../images/Hero-img.png);
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+    .hero-content h2{
+        font-size: 28px;
+        padding-bottom: 10px;
+    }
+    /*============================================
       Hero Section End
+    *=============================================*/
+    .glance{
+        background-image: linear-gradient(#150B5E, #040027);
+        padding: 250px 0px;
+        margin-top: -200px;
+        padding-bottom: -0px !important;
+    }
+    .dsl-glance h2{
+        margin-top: -150px;
+    }
+    /*=== Premium Software ==*/
+    .premium-software {
+        padding: 50px 10px;
+    }
+    .premium-software::before {
+        left: 0%;
+        border-radius: 90% 0 0 0%;
+    }
+    .service-fotter-left h2{
+        font-size: 24px;
+        font-weight: 600;
+        padding-bottom: 20px;
+    }
+    /*=== Mobile App Development section ====*/
+    .app-card{
+        padding: 20px 15px;
+        border-radius: 10px;
+        margin-right: 0px;
+        margin-top: 30px;
+    }
+    .app-card img{
+        margin-left: -90px;
+    }
+  /*============================================
+      Technologies End
   *=============================================*/
-  .certificate-img {
-    display: inline-block;
-  }
-  .footer-social{
-    display: inline-block;
-  }
+
+    .certificate-img {
+        display: inline-block;
+    }
+    .footer-social{
+        display: inline-block;
+    }
 }
