@@ -1,6 +1,13 @@
+/*============================
+   js index
+==============================
+
+==========================================*/
+
 (function($) {
     "use strict";
  
+
     /*================================
     Preloader
     ==================================*/
@@ -9,8 +16,9 @@
         preloader.fadeOut('slow', function() { $(this).remove(); });
     });
 
+
     /*================================
-    Sticky Header
+    stickey Header
     ==================================*/
     $(window).on('scroll', function() {
         var scroll = $(window).scrollTop(),
@@ -23,8 +31,9 @@
         }
     });
 
+
     /*================================
-    Offset Search
+    offste search
     ==================================*/
     var offsetSearch = $('.offset-search');
     var bodyOverlay = $('.body_overlay');
@@ -37,26 +46,13 @@
         $(bodyOverlay).removeClass('show_hide');
     });
 
-    // course_carousel carousel active
-    function course_carousel() {
-        $('.course-carousel').owlCarousel({
-            loop: true,
-            autoplay: false,
-            dots: false,
-            autoplayTimeout: 4000,
-            nav: true,
-            smartSpeed: 800,
-            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
-            responsive: {
-                0: { items: 1, margin: 5 },
-                768: { items: 2, margin: 30 },
-                1024: { items: 3, margin: 30 }
-            }
-        });
-    };
-    course_carousel();
 
-    // common_carousel with middle item highlighting
+    /*================================
+    Owl Carousel
+    ==================================*/
+
+
+    // commn_carousel carousel active
     function commn_carousel() {
         $('.commn-carousel').owlCarousel({
             items: 3,
@@ -66,101 +62,62 @@
             margin: 0,
             autoplayTimeout: 4000,
             nav: false,
-            dotsEach: false,
+            dotsEach: true,
             smartSpeed: 800,
             responsive: {
-                0: { items: 1 },
-                768: { items: 2 },
-                1024: { items: 3 }
-            },
-            onInitialized: setMiddleItem,  // Run on initialization
-            onTranslated: setMiddleItem    // Run after each translation
-        });
-    }
-
-    // Function to set the middle item
-    function setMiddleItem(event) {
-        // Remove 'active-middle' class from all items
-        $('.commn-carousel .owl-item').removeClass('active-middle');
-
-        // Find the active (visible) items
-        let activeItems = $('.commn-carousel .owl-item.active');
-
-        // Ensure there are active items before setting the middle one
-        if (activeItems.length > 0) {
-            // Calculate the middle index of active items
-            let middleIndex = Math.floor(activeItems.length / 2);
-
-            // Add 'active-middle' class to the middle active item
-            activeItems.eq(middleIndex).addClass('active-middle');
-        }
-    }
-
-    // Initialize the carousel
-    commn_carousel();
-
-    // teacher_carousel
-    function teacher_carousel() {
-        $('.teacher-carousel').owlCarousel({
-            items: 3,
-            loop: true,
-            autoplay: true,
-            dots: false,
-            margin: 0,
-            autoplayTimeout: 4000,
-            nav: false,
-            smartSpeed: 800,
-            responsive: {
-                0: { items: 1 },
-                768: { items: 2 },
-                1024: { items: 3 }
+                0: {
+                    items: 1, 
+                },
+                768: {
+                    items: 2, 
+                },
+                1024: {
+                    items: 3,
+                }
             }
         });
     };
-    teacher_carousel();
+    commn_carousel();
 
-    // blog_carousel carousel active
+
+    // testimonial-carousel active
     function blog_carousel() {
-        $('.blog-carousel').owlCarousel({
+        $('.testimonial-carousel').owlCarousel({
+            items: 3,
             loop: true,
-            autoplay: false,
+            autoplay: true,
+            dots: true,
             margin: 0,
-            dots: false,
             autoplayTimeout: 4000,
-            nav: true,
+            nav: false,
+            dotsEach: true,
             smartSpeed: 800,
-            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
             responsive: {
-                0: { items: 1 },
-                768: { items: 2 },
-                1024: { items: 3 }
+                0: {
+                    items: 1, 
+                },
+                768: {
+                    items: 2, 
+                },
+                1024: {
+                    items: 3,
+                }
             }
         });
     };
     blog_carousel();
 
-    // tst_carousel carousel active
-    function tst_carousel() {
-        $('.tst-carousel').owlCarousel({
-            loop: true,
-            autoplay: false,
-            dots: true,
-            items: 1,
-            autoplayTimeout: 4000,
-            nav: false,
-            smartSpeed: 800,
-            mouseDrag: false
-        });
-    };
-    tst_carousel();
 
     $('.expand-video').magnificPopup({
         type: 'iframe',
-        gallery: { enabled: true }
+        gallery: {
+            enabled: true
+        }
     });
 
+
     /*================================
-    Slicknav
+    slicknav
     ==================================*/
     $('ul#m_menu_active').slicknav({
         prependTo: "#mobile_menu"
@@ -169,19 +126,54 @@
 })(jQuery);
 
 
-// Google Map activation
+
+// google map activation
 function initMap() {
+    // Styles a map in night mode.
     var map = new google.maps.Map(document.getElementById('google_map'), {
         center: { lat: 40.674, lng: -73.945 },
         scrollwheel: false,
         zoom: 12,
-        styles: [
-            { "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }] },
-            { "featureType": "poi", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] },
-            { "featureType": "poi", "elementType": "labels.text.fill", "stylers": [{ "color": "#757575" }] },
-            { "featureType": "poi.business", "stylers": [{ "visibility": "off" }] },
-            { "featureType": "poi.park", "elementType": "geometry", "stylers": [{ "color": "#e5e5e5" }] },
-            { "featureType": "transit.station", "elementType": "geometry", "stylers": [{ "color": "#eeeeee" }] }
+        styles: [{
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#f5f5f5"
+                }]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels.text",
+                "stylers": [{
+                    "visibility": "off"
+                }]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#757575"
+                }]
+            },
+            {
+                "featureType": "poi.business",
+                "stylers": [{
+                    "visibility": "off"
+                }]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#e5e5e5"
+                }]
+            },
+            {
+                "featureType": "transit.station",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#eeeeee"
+                }]
+            }
         ]
     });
     var marker = new google.maps.Marker({

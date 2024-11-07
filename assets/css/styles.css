@@ -731,9 +731,10 @@ h3{
   font-size: 24px;
   font-weight: 600;
   padding-bottom: 20px;
+  padding: 500p;
 }
 .commn-carousel{
-  padding: 0px !important;
+  padding-bottom: 50px;
 }
 .app-card{
   text-align: left;
@@ -890,12 +891,9 @@ h3{
 .testimonials-title span{
   font-size: 14px;
 }
-
-/* Apply blue background color to the active middle item */
-.commn-carousel .active-middle .card {
-  background-color: #030c75; /* Your preferred blue color */
-  color: #fff; /* Set text color to white for better readability */
-  transition: background-color 0.3s ease;
+.testimonial-carousel .owl-item.middle-active .card {
+  background-color: blue; /* Set background color to blue */
+  color: white; /* Adjust text color if needed */
 }
 /*============================================
     END Testimonial Area
@@ -939,20 +937,6 @@ h3{
   color: rgba(255, 255, 255, 0.8);
 }
 
-.footer-bottom {
-  color: white;
-  text-align: center;
-  margin-top: 106px;
-  border-top: 1px solid #2a2a2a;
-  padding-top: 32px;
-}
-
-.footer-bottom p {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
 .footer-link li i {
   font-size: 14px;
   margin-right: 12px;
@@ -984,8 +968,28 @@ h3{
   padding: 10px 15px;
   border-radius: 5px;
 }
+.footer-bottom{
+  background: #040210;
+}
+.footer-copyright{
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0px;
+  color: white;
+}
 /*============================================
     END Footer Area
+*=============================================*/
+
+/*============================================
+    Certifications Area
+*=============================================*/
+.certificate-img{
+  display: flex;
+}
+/*============================================
+    Certifications Area END
 *=============================================*/
 
 /*hero area*/
@@ -1124,7 +1128,6 @@ h3{
 }
 
 /*common carousel for all*/
-
 .tst-carousel .owl-dots,
 .commn-carousel .owl-dots {
   text-align: center;
@@ -1137,626 +1140,22 @@ h3{
   height: 5px;
   border-radius: 30px;
   background: #b6b6b6;
-  margin: 50px 5px;
 }
-
+.owl-dot{
+  margin-right: 10px;
+  display: inline-block;
+  margin-top: 30px;
+}
 .tst-carousel .owl-dots .active,
 .commn-carousel .owl-dots .active {
   background: #5465ff;
 }
+.owl-dots .owl-dot:nth-child(n+4) {
+  display: none !important;
+}
 
 /*============================================
     END Home
-*=============================================*/
-
-/*============================================
-    4. Courses
-*=============================================*/
-
-.crumbs-area {
-  position: relative;
-  z-index: 1;
-  background: url(../images/bg/bg1.jpg);
-  padding: 213px 0 114px;
-  background-size: cover;
-}
-
-.crumbs-area:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  opacity: 0.5;
-  background: #1b2945;
-}
-
-.crumb-content h4 {
-  font-size: 55px;
-  color: #fefefe;
-  font-weight: 900;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  line-height: 59px;
-  margin-bottom: 18px;
-}
-
-.crumb-content h4 span {
-  color: #fc9928;
-}
-
-.crumb-title {
-  font-size: 30px;
-  font-weight: 500;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  padding-left: 80px;
-  position: relative;
-}
-
-.crumb-title:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 25px;
-  height: 2px;
-  width: 50px;
-  background: #fc9928;
-}
-
-.view-more {
-  text-align: center;
-}
-
-.view-more a {
-  display: inline-block;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #959595;
-  letter-spacing: 0;
-}
-
-.view-more a:hover {
-  color: #fea402;
-}
-
-.view-more a span {
-  height: 7px;
-  width: 7px;
-  background: #fea402;
-  display: inline-block;
-  margin-right: 5px;
-  border-radius: 50%;
-}
-
-.view-more a span.last-dot {
-  margin-right: 11px;
-}
-
-/*============================================
-    END Courses
-*=============================================*/
-
-/*============================================
-    5. Courses Details
-*=============================================*/
-
-.course-details .course-thumb {
-  margin-bottom: 25px;
-}
-
-.csd-hv-info {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background: rgba(20, 23, 29, 0.95);
-  width: 100%;
-  padding: 20px 30px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.cs-thumb {
-  position: relative;
-}
-.csd-hv-info .course-meta-details li {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.csd-hv-info .course-meta-details {
-  border-top: 0px;
-  padding-top: 0px;
-}
-.csd-hv-info .course-meta-details li span {
-  color: #fff;
-  font-weight: 700;
-}
-
-.csd-hv-info .course-meta-details li:first-child {
-  padding-left: 0;
-}
-
-.csd-hv-info .course-dt-info {
-  margin: 0;
-}
-
-.csd-hv-info .course-meta-details h4 {
-  color: #ffffff;
-}
-
-.course-details .course-meta-title {
-  display: block;
-  margin-bottom: 39px;
-}
-
-.csd-hv-info ul.course-meta-stats li {
-  color: #fff;
-}
-
-.cs-post-share {
-  margin-top: 50px;
-  border-bottom: 1px solid #ebebeb;
-  margin-bottom: 50px;
-  padding-bottom: 50px;
-}
-.cs-post-share .tags h4 {
-  display: inline-block;
-  font-size: 14px;
-  letter-spacing: 0;
-  font-weight: 700;
-}
-
-.cs-post-share .tags ul {
-  display: inline-block;
-}
-
-.cs-post-share .tags ul li a {
-  display: block;
-  font-size: 15px;
-  font-weight: 400;
-  color: #7d7d7d;
-  border: 1px solid #f6f7fb;
-  padding: 8px 13px;
-}
-
-.cs-post-share .tags ul li a:hover {
-  background: #ffc502;
-  color: #222 !important;
-}
-
-.course-details .course-content {
-  padding: 0;
-}
-
-.course-details .course-content > p {
-  color: #9599a2;
-  font-size: 16px;
-}
-
-.cs-social {
-  display: inline-block;
-}
-
-.cs-social li {
-  display: inline-block;
-}
-
-.cs-social li a {
-  display: block;
-  font-size: 18px;
-  color: #464646;
-  margin-right: 12px;
-}
-
-.cs-social li a:hover {
-  color: #fc9928;
-}
-
-.cs-post-author {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
-  color: #7d7d7d;
-  letter-spacing: 0;
-  padding-left: 20px;
-  border-left: 1px solid #eaeaea;
-  margin-left: 5px;
-  line-height: 20px;
-}
-
-.cs-post-author span {
-  color: #fc9928;
-}
-
-.cs-comments {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
-  color: #464646;
-  text-transform: uppercase;
-  letter-spacing: 0;
-  padding-left: 20px;
-  border-left: 1px solid #eaeaea;
-  margin-left: 20px;
-  line-height: 20px;
-}
-
-.cs-share-right {
-  text-align: right;
-}
-
-/*post-autohr-info*/
-
-.post-author-info {
-  margin-bottom: 70px;
-}
-
-.post-author-info .thumb {
-  float: left;
-  height: 145px;
-  width: 145px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 35px;
-}
-
-.post-author-info h5 {
-  color: #363636;
-  letter-spacing: 0;
-  line-height: 21px;
-}
-
-.post-author-info p {
-  color: #7d7d7d;
-  font-style: italic;
-  margin-top: 10px;
-}
-
-.post-author-info .social {
-  margin-top: 20px;
-}
-
-.post-author-info .social li {
-  display: inline-block;
-}
-
-.post-author-info .social li a {
-  display: block;
-  font-size: 16px;
-  color: #464646;
-  margin-right: 12px;
-}
-
-.post-author-info .social li a:hover {
-  color: #fc9928;
-}
-
-/*comment area*/
-
-.comment-area {
-  overflow: hidden;
-  margin-bottom: 22px;
-  margin-top: 50px;
-}
-
-h4.comment-title {
-  margin-bottom: 30px;
-  font-size: 22px;
-}
-
-.comment-info-inner article {
-  overflow: hidden;
-  border-bottom: 1px solid #ebebeb;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-}
-
-.comment-thumb {
-  float: left;
-}
-
-.comment-thumb img {
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  margin-right: 20px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-}
-
-.comment-content {
-  overflow: hidden;
-}
-
-.comment-content h4 {
-  margin-bottom: 10px;
-}
-
-.comment-content p {
-  font-size: 16px;
-  color: #9599a2;
-}
-
-.cs-cmnt-meta {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.cs-cmnt-meta ul li {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-.cs-cmnt-meta ul li:first-child {
-  margin-right: 8px;
-  padding-right: 10px;
-  border-right: 1px solid #b79e9e;
-  line-height: 14px;
-}
-
-.cs-cmnt-meta ul li span {
-  color: #7d7d7d;
-  letter-spacing: 0;
-}
-
-.cs-cmnt-meta > a {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 2px;
-}
-
-.cs-cmnt-meta > a i {
-  color: #444;
-  margin-left: 5px;
-}
-
-.children {
-  padding-left: 60px;
-}
-
-/*leave-comment-area*/
-
-.leave-comment-area form input,
-.leave-comment-area form textarea {
-  width: 100%;
-  height: 50px;
-  margin-bottom: 20px;
-  border: none;
-  border-bottom: 1px solid #ebebeb;
-  letter-spacing: 0;
-  font-weight: 500;
-  border-radius: 2px;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.leave-comment-area form input:focus,
-.leave-comment-area form textarea:focus {
-  border-color: #fc9928;
-}
-
-.leave-comment-area form textarea {
-  height: 120px;
-  padding-top: 12px;
-}
-
-.leave-comment-area form button i {
-  margin-left: 8px;
-}
-
-/*sidebar */
-
-.widget {
-  margin-bottom: 60px;
-}
-.sidebar .widget {
-  margin-bottom: 60px;
-  background: #f6f7fb;
-  padding: 30px;
-}
-
-.widget:last-child {
-  margin-bottom: 0;
-}
-
-.instructor {
-  text-align: center;
-}
-
-.instructor .thumb {
-  float: none;
-  margin: auto;
-  margin-bottom: 30px;
-}
-
-.instructor p {
-  font-size: 16px;
-}
-
-.instructor .post-author-info .social li a {
-  margin: 0 6px;
-}
-
-.widget-subtitle {
-  display: block;
-  font-size: 13px;
-  font-weight: 700;
-  color: #252525;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  padding-left: 22px;
-}
-
-.widget-title {
-  letter-spacing: 0;
-  margin-bottom: 30px;
-  position: relative;
-  font-size: 22px;
-}
-.wd-offer {
-  height: 155px;
-  position: relative;
-  background: url(../images/bg/flwr-bg.jpg) center/cover no-repeat;
-}
-
-.wd-offer .text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.wd-offer h4 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0;
-  margin-bottom: 20px;
-}
-.wd-offer a {
-  display: inline-block;
-  font-family: "Rubik", sans-serif;
-  color: #fff;
-  font-size: 12px;
-  background: #fc9928;
-  padding: 5px 25px;
-}
-.w-cs-single {
-  overflow: hidden;
-  margin-bottom: 20px;
-}
-.w-cs-single img {
-  max-width: 120px;
-  float: left;
-  margin-right: 15px;
-}
-.w-cs-single p {
-  margin-bottom: 0;
-}
-.w-cs-single p a {
-  display: block;
-  font-size: 16px;
-  font-weight: 700;
-}
-.w-cs-single p a:hover {
-  color: #fc9928;
-}
-.w-cs-single span {
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-/*subscribe*/
-.subscribe p {
-  font-size: 18px;
-  color: #363636;
-  margin-bottom: 25px;
-}
-.subscribe form input {
-  width: 100%;
-  height: 40px;
-  padding-left: 15px;
-  border: 1px solid #ebebeb;
-  border-radius: 33px;
-  margin-bottom: 20px;
-  letter-spacing: 0;
-}
-.subscribe form button {
-  width: 100%;
-  height: 40px;
-  text-align: center;
-  border-radius: 33px;
-  letter-spacing: 0;
-  border: none;
-  background: #fc9928;
-  color: #fff;
-  outline: none;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.subscribe form button:hover {
-  background: #222;
-}
-
-.widget-tags li {
-  display: inline-block;
-}
-
-.widget-tags li a {
-  display: block;
-  font-size: 15px;
-  font-weight: 400;
-  background: #fff;
-  padding: 9px 17px;
-  border-radius: 33px;
-  letter-spacing: 0;
-  margin-bottom: 8px;
-}
-
-.widget-tags li a:hover {
-  background: #ffc502;
-  color: #222 !important;
-}
-
-.fix {
-  overflow: hidden;
-}
-
-/*============================================
-    END Courses Details
-*=============================================*/
-
-/*============================================
-    6. Teacher Details
-*=============================================*/
-
-.tchd-content {
-  text-align: left;
-}
-
-.tch-left-thumb {
-  position: relative;
-  margin-bottom: 13px;
-}
-
-.tch-left-thumb:before {
-  content: "";
-  position: absolute;
-  right: -10px;
-  bottom: -10px;
-  border: none;
-  border-right: 5px solid #fc9928;
-  border-bottom: 5px solid #fc9928;
-  height: 86%;
-  width: 100%;
-}
-.tchd-content span {
-  display: inline-block;
-}
-
-.related-course .section-title img.abt-tlt-shape {
-  top: 0;
-}
-
-.related-course .w-cs-single {
-  margin-bottom: 40px;
-}
-
-/*============================================
-    END Teacher Details
 *=============================================*/
 
 /*============================================
