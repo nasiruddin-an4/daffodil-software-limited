@@ -1,13 +1,6 @@
-/*============================
-   js index
-==============================
-
-==========================================*/
-
 (function($) {
     "use strict";
  
-
     /*================================
     Preloader
     ==================================*/
@@ -16,9 +9,8 @@
         preloader.fadeOut('slow', function() { $(this).remove(); });
     });
 
-
     /*================================
-    stickey Header
+    Sticky Header
     ==================================*/
     $(window).on('scroll', function() {
         var scroll = $(window).scrollTop(),
@@ -31,9 +23,8 @@
         }
     });
 
-
     /*================================
-    offste search
+    Offset Search
     ==================================*/
     var offsetSearch = $('.offset-search');
     var bodyOverlay = $('.body_overlay');
@@ -46,26 +37,6 @@
         $(bodyOverlay).removeClass('show_hide');
     });
 
-
-    /*================================
-    Owl Carousel
-    ==================================*/
-    // slider_area carousel active
-    function slider_area() {
-        $('.slider-area').owlCarousel({
-            margin: 0,
-            loop: true,
-            autoplay: false,
-            autoplayTimeout: 4000,
-            nav: true,
-            items: 1,
-            smartSpeed: 800,
-            navText: ['<i><img src="assets/images/angle-left.png" alt="icon"/></i><span>prev</span>', '<span>next</span><i><img src="assets/images/angle-right.png" alt="icon"/></i>']
-        });
-    };
-    slider_area();
-
-
     // course_carousel carousel active
     function course_carousel() {
         $('.course-carousel').owlCarousel({
@@ -77,25 +48,15 @@
             smartSpeed: 800,
             navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
             responsive: {
-                0: {
-                    items: 1,
-                    margin: 5
-                },
-                768: {
-                    items: 2,
-                    margin: 30
-                },
-                1024: {
-                    items: 3,
-                    margin: 30
-                }
+                0: { items: 1, margin: 5 },
+                768: { items: 2, margin: 30 },
+                1024: { items: 3, margin: 30 }
             }
         });
     };
     course_carousel();
 
-
-    // commn_carousel carousel active
+    // common_carousel with middle item highlighting
     function commn_carousel() {
         $('.commn-carousel').owlCarousel({
             items: 3,
@@ -108,22 +69,37 @@
             dotsEach: false,
             smartSpeed: 800,
             responsive: {
-                0: {
-                    items: 1, 
-                },
-                768: {
-                    items: 2, 
-                },
-                1024: {
-                    items: 3,
-                }
-            }
+                0: { items: 1 },
+                768: { items: 2 },
+                1024: { items: 3 }
+            },
+            onInitialized: setMiddleItem,  // Run on initialization
+            onTranslated: setMiddleItem    // Run after each translation
         });
-    };
+    }
+
+    // Function to set the middle item
+    function setMiddleItem(event) {
+        // Remove 'active-middle' class from all items
+        $('.commn-carousel .owl-item').removeClass('active-middle');
+
+        // Find the active (visible) items
+        let activeItems = $('.commn-carousel .owl-item.active');
+
+        // Ensure there are active items before setting the middle one
+        if (activeItems.length > 0) {
+            // Calculate the middle index of active items
+            let middleIndex = Math.floor(activeItems.length / 2);
+
+            // Add 'active-middle' class to the middle active item
+            activeItems.eq(middleIndex).addClass('active-middle');
+        }
+    }
+
+    // Initialize the carousel
     commn_carousel();
 
-
-    // teacher_carousel carousel active
+    // teacher_carousel
     function teacher_carousel() {
         $('.teacher-carousel').owlCarousel({
             items: 3,
@@ -135,20 +111,13 @@
             nav: false,
             smartSpeed: 800,
             responsive: {
-                0: {
-                    items: 1 
-                },
-                768: {
-                    items: 2 
-                },
-                1024: {
-                    items: 3 
-                }
+                0: { items: 1 },
+                768: { items: 2 },
+                1024: { items: 3 }
             }
         });
     };
     teacher_carousel();
-
 
     // blog_carousel carousel active
     function blog_carousel() {
@@ -162,20 +131,13 @@
             smartSpeed: 800,
             navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
             responsive: {
-                0: {
-                    items: 1 
-                },
-                768: {
-                    items: 2 
-                },
-                1024: {
-                    items: 3 
-                }
+                0: { items: 1 },
+                768: { items: 2 },
+                1024: { items: 3 }
             }
         });
     };
     blog_carousel();
-
 
     // tst_carousel carousel active
     function tst_carousel() {
@@ -194,14 +156,11 @@
 
     $('.expand-video').magnificPopup({
         type: 'iframe',
-        gallery: {
-            enabled: true
-        }
+        gallery: { enabled: true }
     });
 
-
     /*================================
-    slicknav
+    Slicknav
     ==================================*/
     $('ul#m_menu_active').slicknav({
         prependTo: "#mobile_menu"
@@ -210,54 +169,19 @@
 })(jQuery);
 
 
-
-// google map activation
+// Google Map activation
 function initMap() {
-    // Styles a map in night mode.
     var map = new google.maps.Map(document.getElementById('google_map'), {
         center: { lat: 40.674, lng: -73.945 },
         scrollwheel: false,
         zoom: 12,
-        styles: [{
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#f5f5f5"
-                }]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.text",
-                "stylers": [{
-                    "visibility": "off"
-                }]
-            },
-            {
-                "featureType": "poi",
-                "elementType": "labels.text.fill",
-                "stylers": [{
-                    "color": "#757575"
-                }]
-            },
-            {
-                "featureType": "poi.business",
-                "stylers": [{
-                    "visibility": "off"
-                }]
-            },
-            {
-                "featureType": "poi.park",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#e5e5e5"
-                }]
-            },
-            {
-                "featureType": "transit.station",
-                "elementType": "geometry",
-                "stylers": [{
-                    "color": "#eeeeee"
-                }]
-            }
+        styles: [
+            { "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }] },
+            { "featureType": "poi", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] },
+            { "featureType": "poi", "elementType": "labels.text.fill", "stylers": [{ "color": "#757575" }] },
+            { "featureType": "poi.business", "stylers": [{ "visibility": "off" }] },
+            { "featureType": "poi.park", "elementType": "geometry", "stylers": [{ "color": "#e5e5e5" }] },
+            { "featureType": "transit.station", "elementType": "geometry", "stylers": [{ "color": "#eeeeee" }] }
         ]
     });
     var marker = new google.maps.Marker({
