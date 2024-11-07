@@ -87,38 +87,6 @@ h3{
   color: #fff;
   text-decoration: none;
 }
-
-.btn-sm {
-  padding: 12px 20px;
-}
-.btn-primary {
-  background: #fc9928 !important;
-  color: #ffffff;
-  border: 1px solid #fc9928 !important;
-}
-.btn-primary:focus,
-.btn-primary:hover {
-  background-color: #ffffff !important;
-  color: #fc9928 !important;
-  border-color: #fc9928 !important;
-}
-.btn-light {
-  background-color: #ffffff !important;
-  color: #252525 !important;
-  border-color: #ffffff !important;
-}
-.btn-light:focus,
-.btn-light:hover {
-  background-color: #fc9928 !important;
-  color: #ffffff !important;
-  border-color: #fc9928 !important;
-}
-.btn-round {
-  border-radius: 50px;
-}
-.primary-bg {
-  background-color: #160937ff;
-}
 /*== Color Code ==*/
 .primary-color {
   color: #160937ff !important;
@@ -357,38 +325,33 @@ h3{
 
 .slicknav_menu {
   background: transparent;
-  margin-top: 21px;
 }
 
 .slicknav_menu .slicknav_icon-bar {
   background-color: #ffffff;
-  height: 2px;
-  width: 19px;
-  margin: 3px 0px;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  height: 3px; /* Slimmer bar for a refined look */
+  width: 30px; /* Adjusted width */
+  margin: 4px 0px;
+  margin-left: -15px !important;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
 .slicknav_btn {
   background-color: transparent;
   position: relative;
-  margin-top: -42px;
   cursor: pointer;
 }
 
+/* When the menu is open */
 .slicknav_menu .slicknav_open .slicknav_icon-bar:nth-child(2) {
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0; /* Hides the middle bar */
 }
 
 .slicknav_menu .slicknav_open .slicknav_icon-bar:nth-child(1) {
-  -webkit-transform: rotate(45deg) translate(1px, 7px);
-  transform: rotate(45deg) translate(1px, 7px);
+  transform: rotate(45deg) translate(4px, 4px); /* Smoothly creates the top-right diagonal */
 }
 
 .slicknav_menu .slicknav_open .slicknav_icon-bar:nth-child(3) {
-  -webkit-transform: rotate(-45deg) translateY(-6px);
-  transform: rotate(-45deg) translateY(-6px);
+  transform: rotate(-45deg) translate(5px, -5px); /* Adjust translation values */
 }
 
 .slicknav_menu {

@@ -2,6 +2,9 @@
 .slicknav_nav .slicknav_item {
     cursor: pointer;
 }
+.slicknav_btn{
+    margin-top: -60px !important;
+}
 
 .slicknav_menu,
 .slicknav_menu * {
@@ -72,7 +75,8 @@
 
 .slicknav_nav .slicknav_arrow {
     font-size: .8em;
-    margin: 0 0 0 .4em
+    margin: 0 0 0 .4em;
+    display: none;
 }
 
 .slicknav_nav .slicknav_item a {
@@ -120,17 +124,17 @@
     clear: both;
     color: #fff;
     margin: 0;
-    font-size: .875em
+    font-size: .875em;
+    padding-bottom: 30px !important;
 }
 
 .slicknav_nav ul {
-    margin: 0 0 0 20px
+    margin: 0 0 0 20px;
 }
 
 .slicknav_nav .slicknav_row,
 .slicknav_nav a {
-    padding: 5px 10px;
-    margin: 2px 5px
+    margin: 10px 5px
 }
 
 .slicknav_nav .slicknav_row:hover {
@@ -143,7 +147,8 @@
 
 .slicknav_nav a {
     text-decoration: none;
-    color: #fff
+    color: #ffffff;
+    padding: 10px;
 }
 
 .slicknav_nav a:hover {
