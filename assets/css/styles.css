@@ -694,27 +694,23 @@ h3{
   font-size: 24px;
   font-weight: 600;
   padding-bottom: 20px;
-  padding: 500p;
 }
 .commn-carousel{
   padding-bottom: 50px;
 }
-.app-card{
-  text-align: left;
-  padding: 20px 15px;
+.mobile-app-card{
   background-color: white;
   border-radius: 10px;
-  margin-right: 20px;
+  padding: 20px 15px;
+  margin: 0px 10px;
 }
-.app-card img{
+.app-img{
   width: 60px;
-  height: 60px;
-  margin-left: -60px;
 }
-.app-card h2{
+.mobile-app-card h2{
   font-size: 32px;
   font-weight: 700;
-  padding: 20px 0px;
+  padding: 10px 0px;
 }
 /*============================================
     Technologies End
@@ -956,7 +952,6 @@ h3{
 *=============================================*/
 
 /*hero area*/
-
 .hero-area {
   margin-top: 104px;
   position: relative;
@@ -1092,12 +1087,12 @@ h3{
 
 /*common carousel for all*/
 .tst-carousel .owl-dots,
-.commn-carousel .owl-dots {
+.mobile-app-carousel .owl-dots {
   text-align: center;
 }
 
 .tst-carousel .owl-dot,
-.commn-carousel .owl-dots .owl-dot {
+.mobile-app-carousel .owl-dots .owl-dot {
   display: inline-block;
   width: 30px;
   height: 5px;
@@ -1110,7 +1105,7 @@ h3{
   margin-top: 30px;
 }
 .tst-carousel .owl-dots .active,
-.commn-carousel .owl-dots .active {
+.mobile-app-carousel .owl-dots .active {
   background: #5465ff;
 }
 .owl-dots .owl-dot:nth-child(n+4) {
@@ -1240,103 +1235,6 @@ h3{
 *=============================================*/
 
 /*============================================
-    9. Blog Details
-*=============================================*/
-
-.blog-top-meta {
-  margin-bottom: 20px;
-}
-
-.blog-top-meta ul li {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
-  color: #7d7d7d;
-  letter-spacing: 0;
-  margin-right: 18px;
-}
-
-.blog-top-meta ul li span {
-  letter-spacing: 0;
-  color: #fc9928;
-}
-
-.blog-top-meta ul li i {
-  color: #fc9928;
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-.blog-meta i {
-  color: #fc9928;
-}
-
-/*widget-search*/
-
-.widget-search form {
-  position: relative;
-}
-
-.widget-search form input {
-  height: 60px;
-  width: 100%;
-  padding-left: 20px;
-  border: 1px solid #ebebeb;
-  letter-spacing: 0;
-}
-
-.widget-search form button {
-  color: #fc9928;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 56px;
-  border: none;
-  background: transparent;
-  font-size: 22px;
-  border-left: 1px solid #ebebeb;
-  outline: none;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.widget-search form button:hover {
-  background: #ffc502;
-  color: #fff;
-}
-
-.widget-category .list li a {
-  display: block;
-  font-size: 16px;
-  font-weight: 700;
-  color: #464646;
-  letter-spacing: 0;
-  border-bottom: 1px solid #ebebeb;
-  padding: 15px 0;
-  position: relative;
-  padding-left: 20px;
-}
-
-.widget-category .list li a:hover {
-  color: #fc9928;
-}
-
-.widget-category .list li a:before {
-  content: "\f105";
-  position: absolute;
-  left: 0;
-  top: 13px;
-  font-family: fontawesome;
-  color: #464646;
-}
-
-/*============================================
-    END Blog Details
-*=============================================*/
-
-/*============================================
     10. 404
 *=============================================*/
 
@@ -1371,14 +1269,3 @@ h3{
 /*============================================
     END 404
 *=============================================*/
-
-.modal-body input {
-  border: 1px solid #efefef;
-  margin-bottom: 20px;
-  padding: 10px 15px;
-  width: 100%;
-}
-.checkbox-inline input[type="checkbox"] {
-  margin-right: 8px;
-  width: auto;
-}

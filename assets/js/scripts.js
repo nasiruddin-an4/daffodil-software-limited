@@ -52,9 +52,9 @@
     ==================================*/
 
 
-    // commn_carousel carousel active
+    // carousel carousel active
     function commn_carousel() {
-        $('.commn-carousel').owlCarousel({
+        $('.mobile-app-carousel').owlCarousel({
             items: 3,
             loop: true,
             autoplay: true,

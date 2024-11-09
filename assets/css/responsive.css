@@ -5,30 +5,7 @@
   
   /* Large devices (e.g., laptops, min-width 992px) */
   @media (min-width: 992px) and (max-width: 1199px) {
-    .ptb--120 {
-        padding: 100px 0;
-    }
-    .pt--120 {
-        padding-top: 100px;
-    }
-    .pb--120 {
-        padding-bottom: 100px;
-    }
-    .pb--100 {
-        padding-bottom: 80px;
-    }
-    .pb--80 {
-        padding-bottom: 60px;
-    }
-    .pb--70 {
-        padding-bottom: 60px;
-    }
-    .logo {
-        margin: 20px 0;
-    }
-    .logo a{
-        width: 20%;
-    }
+    
   }
   
   /* Medium devices (e.g., tablets, min-width 768px) */
@@ -51,31 +28,37 @@
     .pb--70 {
         padding-bottom: 50px;
     }
+    .header-top{
+        display: none;
+    }
+    .hd-btn{
+        display: none;
+    }
+    .header-bottom,
+    .sticky-header.header-bottom {
+        position: absolute;
+        top: auto;
+    }
     .logo {
         margin: 20px 0;
     }
     .logo a{
         width: 20%;
     }
+    .footer-social{
+        display: flex;
+    }
+    .footer-social ul{
+        margin-left: -10px;
+    }
+    .footer-social ul li{
+        margin-top: 0px;
+    }
+
   }
   
   /* Small devices (e.g., landscape phones, min-width 576px) */
   @media (min-width: 576px) and (max-width: 767px) {
-    .hero-content h1,
-    .slider-content h1{
-        font-size: 22px;
-        line-height: 32px;
-    }
-    .hero-content h3,
-    .slider-content h3{
-        font-size: 18px;
-    }
-    .hb-right ul li{
-        text-align: left;
-    }
-    .middle-logo {
-        display: none!important;
-    }
     .ptb--120 {
         padding: 80px 0;
     }
@@ -103,11 +86,25 @@
     .widget-title {
         margin-bottom: 35px;
     }
+    .header-top{
+        display: none;
+    }
+    .hd-btn{
+        display: none;
+    }
+    .header-bottom,
+    .sticky-header.header-bottom {
+        position: absolute;
+        top: auto;
+    }
     .logo {
         margin: 20px 0;
     }
     .logo a{
         width: 20%;
+    }
+    .certificate-img{
+        display: inline-block;
     }
   }
   
@@ -185,23 +182,36 @@
         padding-bottom: 20px;
     }
     /*=== Mobile App Development section ====*/
-    .app-card{
+    .mobile-app-card{
         padding: 20px 15px;
         border-radius: 10px;
         margin-right: 0px;
         margin-top: 30px;
     }
-    .app-card img{
-        margin-left: -90px;
-    }
   /*============================================
       Technologies End
   *=============================================*/
-
-    .certificate-img {
+    .certificate-img{
         display: inline-block;
     }
     .footer-social{
         display: inline-block;
+    }
+    .footer-social ul{
+        margin-left: -30px;
+    }
+    .footer-social ul li{
+        margin-top: 20px;
+    }
+    .footer-social ul li{
+        margin-right: 0px !important;
+    }
+    .footer-social ul li a{
+        font-size: 16px;
+    }
+    .footer-copyright{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
     }
 }
